@@ -1,0 +1,37 @@
+.row {
+  color: white;
+  margin-left: 20px;
+}
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+  /* tells the browser whenever we use this class don't display our scroolbar but keeps the functionality of the scroolbar there*/
+  display: none;
+}
+.row__poster {
+  object-fit: contain;
+  /* keeps the aspect ration */
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+
+  /* trainsition effect  */
+  transition: transform 450ms;
+  /* applies delay whenever we define transform  */
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
